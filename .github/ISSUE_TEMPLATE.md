@@ -1,5 +1,8 @@
 # Issue Tracking
 
+* Please make sure you fill up the form and follow the format while reporting bug or requesting new feature.
+* Before submitting kindly click on preview and review the changes.
+
 ## Prerequisites
 
 ### Step 1
