@@ -1,0 +1,21 @@
+{
+  "name": "grc-cli-sample",
+  "version": "0.0.1",
+  "description": "A sample example to run and debug grc-cli",
+  "scripts": {
+    "version": "node ../bin/grc-cli -v",
+    "help": "node ../bin/grc-cli -h",
+    "lint": "node ../bin/grc-cli lint",
+    "lint:source": "node ../bin/grc-cli lint src,testDir"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/get-react-components/grc-cli.git"
+  },
+  "author": "Ashwin Hegde <ashwin.hegde3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/get-react-components/grc-cli/issues"
+  },
+  "homepage": "https://github.com/get-react-components/grc-cli#readme"
+}
