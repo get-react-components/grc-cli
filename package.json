@@ -1,0 +1,36 @@
+{
+  "name": "grc-cli",
+  "version": "0.0.1",
+  "description": "A cli program to manage grc components",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/get-react-components/grc-cli.git"
+  },
+  "author": "Ashwin Hegde <ashwin.hegde3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/get-react-components/grc-cli/issues"
+  },
+  "homepage": "https://github.com/get-react-components/grc-cli#readme",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.0"
+  }
+}
