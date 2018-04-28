@@ -4,47 +4,46 @@
  * @file Initial commander execution
  */
 const program = require('commander');
-const { execLint } = require('../src/libs/lint');
+const { cmdLint, execLint } = require('../src/libs/lint');
 const { constants } = require('../src/utils/constants');
 const { welcome, describeCmd } = require('../src/utils/messages');
+const { verifyLintOptions } = require('../src/verify/lint');
 
+/**
+ * Execute lint operation
+ * Supports
+ *  - ESLint
+ */
 program
   .version(welcome(), '-v, --version')
-  .command('lint [source] [no-autofix] [config]')
+  .command(cmdLint())
   .description(describeCmd('lint'))
   .action((source, autofix, config) => {
-    
-    /**
-     * Validate user passed options and either assign defaults or throw error
-     */
-    if (autofix && autofix !== constants.lint.noAutofix) {
-      console.error(`
-        Error: the option "${autofix}" passed is invalid,
-        Please try using "${constants.lint.noAutofix}" instead!\n`);
-      process.exit(1);
-    }
+    execLint(verifyLintOptions(source, autofix, config));
+  });
 
-    if (config) {
-      switch (config) {
-        case constants.lint.airbnb:
-        case constants.lint.standard:
-        break;
+/**
+ * Execute build operation
+ * Supports
+ *  - Webpack
+ */
+program
+  .command('build')
+  .description(describeCmd('build'))
+  .action((source, autofix, config) => {
+    console.log('App build is in progress ...')
+  });
 
-        default:
-        console.warning(`\n
-          Warning: the option "${config}" passed is invalid, executing with default config "eslint:recommended".
-          Possible valid options can be "${constants.lint.airbnb}", and "${constants.lint.standard}"\n`);
-        break;
-      }
-    }
-    
-    const options = {
-      source,
-      autofix,
-      config
-    }
-
-    execLint(options)
+/**
+ * Start development server
+ * Supports
+ *  - Webpack-Dev-Server
+ */
+program
+  .command('start')
+  .description(describeCmd('start'))
+  .action((source, autofix, config) => {
+    console.log('App stated ...')
   });
 
 program.parse(process.argv);

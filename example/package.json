@@ -5,8 +5,11 @@
   "scripts": {
     "version": "node ../bin/grc-cli -v",
     "help": "node ../bin/grc-cli -h",
+
     "lint": "node ../bin/grc-cli lint",
-    "lint:source": "node ../bin/grc-cli lint src,testDir"
+    "lint:source": "node ../bin/grc-cli lint src,testDir",
+    
+    "build": "node ../bin/grc-cli build"
   },
   "repository": {
     "type": "git",
