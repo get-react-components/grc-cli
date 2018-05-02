@@ -114,6 +114,11 @@ function execLint({
   return _executeESLint(esLintCmd);
 }
 
+function cmdLint() {
+  return 'lint [source] [no-autofix] [config]';
+}
+
 module.exports = {
-  execLint
+  execLint,
+  cmdLint
 }
