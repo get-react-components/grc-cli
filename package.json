@@ -18,7 +18,7 @@
   "homepage": "https://github.com/get-react-components/grc-cli#readme",
   "dependencies": {
     "commander": "^2.15.1",
-    "eslint": "^4.19.1",
+    "eslint": "^5.5.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
